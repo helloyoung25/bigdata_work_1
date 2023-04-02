@@ -1,20 +1,20 @@
-# bigdata_work_1
-# 웹 크롤링
-# 파이썬을 이용한 교촌치킨 매장 정보 크롤링
+bigdata_work_1
+웹 크롤링
+파이썬을 이용한 교촌치킨 매장 정보 크롤링
 
-# BeautifulSoup 라이브러리를 사용하여 HTML 페이지를 크롤링하는 것은 정적 웹 페이지에서만 가능
+BeautifulSoup 라이브러리를 사용하여 HTML 페이지를 크롤링하는 것은 정적 웹 페이지에서만 가능
 from bs4 import BeautifulSoup as bs
 import urllib.request
-# 크롤링한 데이터를 pandas를 사용하여 CSV파일로 저장
+크롤링한 데이터를 pandas를 사용하여 CSV파일로 저장
 import pandas as pd
 import datetime
-# 웹 브라우저를 원격 조정하는 Selenium 라이브러리를 사용하여 동적 웹 페이지 크롤링 가능
-# -- 자바스크립트를 사용하는 동적 웹 페이지는 웹 브라우저에서 자바스크립트가 실행되어야만 크롤링할 데이터가 나타남
+웹 브라우저를 원격 조정하는 Selenium 라이브러리를 사용하여 동적 웹 페이지 크롤링 가능
+자바스크립트를 사용하는 동적 웹 페이지는 웹 브라우저에서 자바스크립트가 실행되어야만 크롤링할 데이터가 나타남
 from selenium import webdriver
 
 num = 0
 def kyochon_store(result):
-    # 페이지를 반복해서 url 설정
+    페이지를 반복해서 url 설정
     for sido in range(1, 30):
         for gungu in range(1, 70):
             # 없는(빈) 페이지일 경우 pass
